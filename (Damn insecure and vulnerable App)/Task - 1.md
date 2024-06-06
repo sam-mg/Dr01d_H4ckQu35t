@@ -1,0 +1,22 @@
+# Task - 1
+
+Let's delve into Task One now.  
+Upon installing the APK, the initial option we encounter is labeled as `INSECURE LOGGING`.
+
+To gain a deeper understanding of the application's components, our course of action involves either dissecting the APK through JADX or examining its contents via the Git repository from [README](README.md).
+
+Upon scrutinizing the APK in JADX, we're directed to the `LogActivity`.
+
+![Untitled](DIVA%20ScreenShots/Level%20-%201%20(LogActivity).png)
+
+Here, it becomes apparent that the application is logging user-entered values in case of errors.  
+The snippet of code responsible is as follows:
+```java
+Log.e("diva-log", "Error while processing transaction with credit card: " + cctxt.getText().toString());
+```
+The critical issue lies in the fact that any application can access the logcat, potentially leading to the exposure of sensitive data. The optimal solution entails encrypting the credentials, rendering them unreadable even if compromised.
+
+To demonstrate the vulnerability, one can extract the entered credentials using the following command:
+```bash
+adb logcat | grep "diva-log"
+```
