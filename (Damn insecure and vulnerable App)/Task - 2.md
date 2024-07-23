@@ -1,6 +1,6 @@
 # Task - 2
 
-Let's delve into Task Two now.  
+Let's proceed to Task Two.  
 When analyzing `MainActivity.class`, it redirects us to `HardcoreActivity.class`.  
 ![Untitled](DIVA%20ScreenShots/Level%20-%202%20(HardcoreActivity).png)
 
