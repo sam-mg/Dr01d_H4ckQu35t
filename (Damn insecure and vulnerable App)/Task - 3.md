@@ -1,6 +1,6 @@
 # Task - 3
 
-Let's delve into Task Three now.  
+Now, it's time for Task Three.  
 Upon examining `MainActivity.class`, it directs us to `InsecureDataStorage1Activity.class`.  
 ![Untitled](DIVA%20ScreenShots/Level%20-%203%20(InsecureDataStorage1Activity).png)
 
