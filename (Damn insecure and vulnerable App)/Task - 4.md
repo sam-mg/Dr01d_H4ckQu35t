@@ -1,6 +1,6 @@
 # Task - 4
 
-Let's delve into Task Four now.  
+Let's jump into Task Four.  
 Upon inspecting `MainActivity.class`, it leads us to `InsecureDataStorage2Activity.class`.  
 ![Untitled](DIVA%20ScreenShots/Level%20-%204%20(InsecureDataStorage2Activity).png)
 
