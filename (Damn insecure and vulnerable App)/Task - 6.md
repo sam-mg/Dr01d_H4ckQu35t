@@ -1,7 +1,7 @@
 # Task - 6
 
-Let's delve into Task Six now.  
-Upon examining `MainActivity.class`, it directs us to `InsecureDataStorage4Activity.class`
+Here we go with Task Six.  
+Reviewing `MainActivity.class`, it becomes clear that it points to `InsecureDataStorage4Activity.class`
 ![Untitled](DIVA%20ScreenShots/Level%20-%206%20(InsecureDataStorage4Activity).png)
 
 While tackling this level, you might face some issues due to emulator permissions. Once you adjust these permissions, you can proceed to complete the levels.
