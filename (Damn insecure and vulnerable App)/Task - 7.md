@@ -1,7 +1,7 @@
 # Task - 7
 
-Let's delve into Task Seven now.  
-Upon examining `MainActivity.class`, it directs us to `SqlInjectionActivity.class`.  
+Next up is Task Seven.  
+In `MainActivity.class`, we can trace a path to `SqlInjectionActivity.class`.  
 ![Untitled](DIVA%20ScreenShots/Level%20-%207%20(SqlInjectionActivity).png)  
 
 As you can see in the query `"SELECT * FROM sqliuser WHERE user = '" + srchtxt.getText().toString() + "'"` is vulnerable to SQL injection.
