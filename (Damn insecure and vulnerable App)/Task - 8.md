@@ -1,7 +1,7 @@
-# Task - 7
+# Task - 8
 
-Let's delve into Task Seven now.  
-Upon examining `MainActivity.class`, it directs us to `InputValidation2URISchemeActivity.class`.  
+We're now on Task Eight now.  
+Upon inspecting `MainActivity.class`, we see that it points us to `InputValidation2URISchemeActivity.class`.  
 ![Untitled](DIVA%20ScreenShots/Level%20-%208%20(InputValidation2URISchemeActivity).png)
 
 When we review this code, we notice that there is no validation for the user input provided to the WebView.
