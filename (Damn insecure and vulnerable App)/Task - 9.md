@@ -4,7 +4,7 @@ Now, let's move on to Task Nine.
 Upon reviewing `MainActivity.class`, we find it leading us to `AccessControl1Activity.class`.  
 ![Untitled](DIVA%20ScreenShots/Level%20-%209%20(AccessControl1Activity).png)
 
-Here, we see that the activity leads to `jakhar.aseem.diva.action.VIEW_CREDS`. When we look into this in the Manifest file, we find it redirects to an activity.
+Here, we see that the activity leads to `jakhar.aseem.diva.action.VIEW_CREDS`. When we look into this in the Manifest, we find it redirects to an activity.
 ![Untitled](DIVA%20ScreenShots/Level%20-%209%20(Manifest).png)
 
 From this, we see it leads to `APICredsActivity.class`. When we navigate there, we find these items:
