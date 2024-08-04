@@ -6,15 +6,15 @@ Let’s explore the next vulnerability, found in the "Flag One - Login" activity
 When examining the Java code of this activity, we see the following:
 ```java
 public final void submitFlag(View view) {
-        EditText editText = (EditText) findViewById(R.id.editText2);
-        C1843g.m8724d(editText, "editText2");
-        if (C1843g.m8721a(editText.getText().toString(), "F1ag_0n3")) {
-            Intent intent = new Intent(this, (Class<?>) FlagOneSuccess.class);
-            new FlagsOverview().m5595J(true);
-            new ApplicationC0939j().m5616b(this, "flagOneButtonColor", true);
-            startActivity(intent);
-        }
+    EditText editText = (EditText) findViewById(R.id.editText2);
+    C1843g.m8724d(editText, "editText2");
+    if (C1843g.m8721a(editText.getText().toString(), "F1ag_0n3")) {
+        Intent intent = new Intent(this, (Class<?>) FlagOneSuccess.class);
+        new FlagsOverview().m5595J(true);
+        new ApplicationC0939j().m5616b(this, "flagOneButtonColor", true);
+        startActivity(intent);
     }
+}
 ```
 
 Here, we can see that the required text ("F1ag_0n3") is hard-coded and not encrypted. This presents a significant security flaw. When the correct text is entered, the application navigates to `FlagOneSuccess.class`.
