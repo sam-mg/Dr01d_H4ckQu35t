@@ -62,7 +62,13 @@ To get started with Frida, follow these steps:
 3. **Run Frida Server in the Background**:
     To start the Frida server in the background using `adb`, use:
     ```bash
-    adb shell "nohup /data/local/tmp/frida-server &"
+    adb shell /data/local/tmp/frida-server -D &
+    ```
+
+4. **Terminate the Frida Server**:
+    To terminate the Frida server using `adb`, use the following command:
+    ```bash
+    adb shell kill $(adb shell ps | grep "*frida-server*" | awk '{print $2}')
     ```
 
 ## Basic Usage
