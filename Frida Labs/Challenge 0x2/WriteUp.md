@@ -33,7 +33,7 @@ Java.perform(() => {
 });
 ```
 This script hooks into MainActivity and calls the `get_flag()` method with `4919` as an argument, triggering the method and setting the flag. 
-![](Challenge0x01/ScreenShots/Result.jpg)
+![](ScreenShots/Result.jpg)
 
 While there are alternative ways to retrieve the flag, such as decrypting the base64 string manually, the purpose here is to demonstrate the power of Frida in hooking and manipulating Android methods.
 
