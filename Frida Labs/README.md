@@ -68,7 +68,7 @@ To get started with Frida, follow these steps:
 4. **Terminate the Frida Server**:
     To terminate the Frida server using `adb`, use the following command:
     ```bash
-    adb shell kill $(adb shell ps | grep "*frida-server*" | awk '{print $2}')
+    adb shell kill $(adb shell ps | grep "frida-server" | awk '{print $2}')
     ```
 
 ## Basic Usage
