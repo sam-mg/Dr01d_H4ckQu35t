@@ -1,4 +1,4 @@
-# Challenge0x01
+# Challenge 0x1
 
 Let's dive into the source code and break it down for easier understanding:
 ```java
@@ -33,12 +33,13 @@ The challenge is clear: since brute-forcing every possible number is inefficient
 
 ---
 **Hooking `get_random()`**  
+
 By hooking into the `get_random()` method, we can intercept and manipulate the random value it generates. Here's a JavaScript snippet to accomplish this using Frida:
 ```js
 Java.perform(() => {
     const Activity = Java.use('com.ad2001.frida0x1.MainActivity');
     Activity.get_random.implementation = function () {
-        send('Inside the get_random');
+        send('Inside get_random');
         var randomNumber = this.get_random();
         console.log('Random number generated: ' + randomNumber);
         return randomNumber;
@@ -59,6 +60,7 @@ With this tweak, the method will always return `0`, allowing us to easily calcul
 
 ---
 **Hooking `check()`**  
+
 Alternatively, we can hook into the `check()` method, bypassing the need to guess the correct input entirely:
 ```js
 Java.perform(() => {
