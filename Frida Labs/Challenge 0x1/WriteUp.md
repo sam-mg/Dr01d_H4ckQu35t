@@ -72,7 +72,7 @@ Java.perform(() => {
 });
 ```
 Here, regardless of the user's input, the method is forced to validate the correct answer, ensuring success every time. This method is effective when you want to ensure the desired outcome.
-![](Challenge0x01/ScreenShots/Result.jpg)
+![](ScreenShots/Result.jpg)
 
 Both methods demonstrate the power and flexibility of function hooking. Whether you choose to manipulate the random number generator or force a successful check, the key takeaway is understanding how to hook into functions to achieve your goals.
 
