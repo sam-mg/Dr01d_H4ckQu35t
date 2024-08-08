@@ -13,7 +13,8 @@ public class Check {
 ```
 In this code, the `get_flag` method checks if the input integer `a` equals `1337`. If it does, the method returns a decoded string; otherwise, it returns an empty string. Unlike previous challenges, this method is not static, so we need to create an instance of the `Check` class to call `get_flag`.
 
-**Hooking into `get_flag()`**
+**Hooking into `get_flag()`**  
+
 To interact with the `get_flag` method, we can use Frida to create an instance of the `Check` class and call the method with the correct argument. Here's how you can do it:
 ```js
 Java.perform(() => {
