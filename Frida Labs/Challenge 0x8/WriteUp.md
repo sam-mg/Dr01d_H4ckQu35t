@@ -35,9 +35,9 @@ It is crucial to focus on finding the method name rather than the address, as th
 
 **Hooking the Native Method**
 
-Once we've identified the function name, the next step is to use Frida to hook into the `cmpstr()` method using `Module.findExportByName(<.so_file_name>, <export_name>)`:
+Once we've identified the function name, the next step is to use Frida to hook into the `cmpstr()` method:
 ```js
-var strcmp_adr =  Module.findExportByName("libfrida0x8.so", "strcmp");
+var strcmp_adr =  Module.enumerateExports("libfrida0x8.so")[0]["address"];
 Interceptor.attach(strcmp_adr, {
     onEnter: function (args) {
     },
@@ -49,7 +49,7 @@ This is the foundational script. However, before we proceed, we need to pinpoint
 
 To do this, we inspect the arguments being passed into the method:
 ```js
-var strcmp_adr =  Module.findExportByName("libfrida0x8.so", "strcmp");
+var strcmp_adr =  Module.enumerateExports("libfrida0x8.so")[0]["address"];
 Interceptor.attach(strcmp_adr, {
     onEnter: function (args) {
         var arg0 = Memory.readUtf8String(args[0]);
@@ -64,7 +64,7 @@ Interceptor.attach(strcmp_adr, {
 
 With this script, we can identify which argument corresponds to the user input and then determine the flag:
 ```js
-var strcmp_adr =  Module.findExportByName("libfrida0x8.so", "strcmp");
+var strcmp_adr =  Module.enumerateExports("libfrida0x8.so")[0]["address"];
 Interceptor.attach(strcmp_adr, {
     onEnter: function (args) {
         var arg0 = Memory.readUtf8String(args[0]);

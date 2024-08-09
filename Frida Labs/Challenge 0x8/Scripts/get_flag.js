@@ -1,4 +1,4 @@
-var strcmp_adr =  Module.findExportByName("libfrida0x8.so", "strcmp");
+var strcmp_adr =  Module.enumerateExports("libfrida0x8.so")[0]["address"];
 Interceptor.attach(strcmp_adr, {
     onEnter: function (args) {
         var arg0 = Memory.readUtf8String(args[0]);
