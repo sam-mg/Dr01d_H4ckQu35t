@@ -24,11 +24,16 @@ Furthermore, the strings file contains:
 <string name="firebase_database_url">https://injuredandroid.firebaseio.com</string>
 ```
 
-After examining the code, we can construct the URL as follows:
+By analyzing the code and the strings file, we can construct the correct Firebase URL:
 ```
 https://injuredandroid.firebaseio.com/flags/.json
 ```
 Navigating to this URL reveals the specific flag: `[nine!_flag]`
 
-Entering this flag yields the expected result:
+The application expects a Base64-encoded version of the flag to be entered. Decoding the given string, we get:
+```
+W25pbmUhX2ZsYWdd
+```
+
+Entering this encoded flag into the application yields the expected result:
 ![](ScreenShots/Flag%20Three%20-%20Resources%20(Result).jpg)
