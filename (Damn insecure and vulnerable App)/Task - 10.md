@@ -1,0 +1,29 @@
+# Task - 10
+
+Let's jump into Task Ten.  
+Upon examining the code in `MainActivity.class`, we find a reference to `AccessControl2Activity.class`.  
+![Untitled](DIVA%20ScreenShots/Level%20-%2010%20(AccessControl2Activity).png)
+
+Here, we see that the activity leads to `jakhar.aseem.diva.action.VIEW_CREDS2`. Checking the Manifest file confirms it redirects to `APICreds2Activity.class`.
+![Untitled](DIVA%20ScreenShots/Level%20-%2010%20(APICreds2Activity).png)
+
+We try the same approach as before using:
+```bash
+adb shell am start jakhar.aseem.diva/.APICreds2Activity
+```
+However, this time, we don’t get the expected result.
+![Untitled](DIVA%20ScreenShots/Level%20-%2010%20(Failed_Attempt).png)
+
+This happens because of a boolean check in the `APICreds2Activity` class. Specifically, the line `boolean bcheck = i.getBooleanExtra(getString(R.string.chk_pin), true);` checks whether an extra called `chk_pin` is set to `true` in the intent. By default, if this extra isn't provided, the value is assumed to be `true`, which prevents us from accessing the sensitive data.
+
+To bypass this check, we need to send an intent with the `chk_pin` extra explicitly set to `false`. For a deeper understanding of how to customize ADB commands and craft specific intents, you can refer to this guide: [Custom Commands](https://www.notion.so/Custom-Commands-0b2b910ec23a4c3c8998a337c2867427?pvs=21) 
+
+Based on this, we can adjust the command to override the boolean check:
+```bash
+adb shell am start -n jakhar.aseem.diva/.APICreds2Activity -a jakhar.aseem.diva.action.VIEW_CREDS2 --ez check_pin false
+```
+
+After executing this command, we successfully access the activity.
+![Untitled](DIVA%20ScreenShots/Level%20-%2010%20(Got_Activity).png)
+
+This approach allows us to bypass previous steps, such as selecting the radio button, and directly access the desired activity.
