@@ -32,9 +32,12 @@ Prerequisites:
 
 First, we need to install the APK on our emulator:
 ```bash
-adb install diva-beta.apk
+adb install DIVA.apk
 ```
 
 ---
 
 In this directory, you can find my write-ups for the challenges, detailing how I faced and solved them. Attempt to solve them on your own; if you encounter difficulty, refer to my write-ups for guidance.
+
+---
+If you have any questions or need further assistance, feel free to open an issue on this repository or reach out through the available contact methods. Happy exploring and learning!
