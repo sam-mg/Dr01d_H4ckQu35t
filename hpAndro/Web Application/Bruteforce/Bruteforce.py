@@ -42,7 +42,8 @@ def attempt_password(password):
         if response.status_code == 200:
             print(f"Attempt with password '{password.strip()}' returned status code {response.status_code}.")
             if "Try" not in response.text:
-                print(response.text)
+                print("Request Sent: ", data)
+                print("Response Recieved: \n", response.text)
                 return True
     except requests.exceptions.RequestException as e:
         print(f"Error sending request with password '{password}': {e}")
