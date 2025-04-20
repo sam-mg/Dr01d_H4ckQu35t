@@ -1,60 +1,36 @@
 # Injured Android
 
-Injured Android is a challenge app designed to expose common vulnerabilities found in Android applications. With a series of 19 tasks, this app serves as a hands-on tool for learning about app security and vulnerability exploitation.
+This directory contains my write-ups for `Injured Android`. You can download the APK from the [Play Store](https://play.google.com/store/apps/details?id=b3nac.injuredandroid) or directly from [here](./Files/Injured_Android.apk).
 
-> **Objective:** The purpose of this app is to educate developers and security enthusiasts on identifying and mitigating vulnerabilities resulting from insecure coding practices.
+## Workflow
 
-## Requirements:
-
-You can obtain the APK from the [GitHub Repository](https://github.com/sam-mg/Dr01d_H4ckQu35t/InjuredAndroid/Files/) or directly from the [Play Store](https://play.google.com/store/apps/details?id=b3nac.injuredandroid). 
-
-### Accessing the Source Code:
-
-1. **Using `jadx`**:
-   - Download and install `jadx` to decompile the APK and examine the source code.
-
-2. **From GitHub**:
-   - Alternatively, the source code is available on the [GitHub Repository](https://github.com/B3nac/InjuredAndroid/tree/master/InjuredAndroid).
-
-### Tools Installation:
-
-Ensure you have the following tools installed:
-
-- **Android Emulator**: Required to run the APK.
-- **ADB**: Android Debug Bridge for interacting with the emulator.
-- **jadx**: For decompiling the APK.
-
-To install ADB and jadx, use the following commands:
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-brew install adb
-brew install jadx
+```mermaid
+gitGraph LR:
+    commit tag: "Injured Android" id: "By Kyle"
+    branch "Injured Android"
+    checkout "Injured Android"
+    commit id: "XSSText"
+    commit id: "Flag One - Login"
+    commit id: "Flag Two - Exported Activity"
+    commit id: "Flag Three - Resources"
+    commit id: "Flag Four - Login 2"
+    commit id: "Flag Five - Exported Broadcast Receiver"
+    commit id: "Flag Six - Login 3"
+    commit id: "Flag Seven - SQLite"
+    commit id: "Flag Eight - AWS"
+    commit id: "Flag Nine - Firebase"
+    commit id: "Flag Ten - Unicode"
+    commit id: "Flag Eleven - Deep Links"
+    commit id: "Flag Twelve - Protected Components"
+    commit id: "Flag Thirteen - RCE"
+    commit id: "Flag Fourteen - Flutter XSS"
+    commit id: "Flag Fifteen - Assembly"
+    commit id: "Flag Sixteen - CSP Bypass"
+    commit id: "Flag Seventeen - SSL Pinning Bypass"
+    commit id: "Flag Eighteen - File Provider"
+    checkout main
+    merge "Injured Android"
+    commit id: "Make Write-ups"
 ```
 
-### Prerequisites:
-
-- Basic knowledge of `adb` commands.
-
-## Setup:
-
-1. **Install the APK on your emulator:**
-
-    ```bash
-    adb install Injured_Android.apk
-    ```
-
-2. **Launch the app** on your emulator and start working on the challenges.
-
----
-
-## Write-Ups
-
-In this directory, you will find detailed write-ups for each of the 19 tasks. These documents outline the approach I took to solve each challenge and provide insights into the vulnerabilities and their exploitation. 
-
-Feel free to attempt solving the challenges on your own first. If you encounter difficulties, consult my write-ups for guidance and solutions.
-
----
-
-Happy learning and exploring! If you have any questions or need further assistance, feel free to reach out.
+Happy learning!

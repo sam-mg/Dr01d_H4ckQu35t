@@ -1,43 +1,29 @@
-# DIVA
+# Damn Insecure and Vulnerable App (DIVA)
 
-DIVA (Damn insecure and vulnerable App) is an App intentionally designed to be insecure.
+This directory contains my write-ups for DIVA (Damn Insecure and Vulnerable App). You can download the APK from the [GitHub repository](https://github.com/0xArab/diva-apk-file) or directly via [this link](./Files/DIVA.apk).
 
-> The aim of the app is to teach developers and security professionals about flaws commonly present in apps due to poor or insecure coding practices.
-> 
----
-Now, let's delve into an application built to be insecure. We will identify vulnerabilities within it, exploit them, and explore methods to prevent such vulnerabilities.
-
-## Requirements:
-
-You can obtain the APK from the [GitHub Link](https://github.com/0xArab/diva-apk-file) or from this repository.
-You can access the source code through the following methods:
-1. Using `jadx`
-2. Alternatively, you can access the source code from the [Github Repo](https://github.com/payatu/diva-android)
-
-An Android Emulator
-
-To install ADB or jadx, run the following commands:
-```bash
-/bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
-
-brew install adb
-brew install jadx
+## Workflow
+```mermaid
+gitGraph LR:
+    commit tag: "Damn Insecure and Vulnerable App" id: "By Aseem Jakhar"
+    branch "DIVA"
+    checkout "DIVA"
+    commit id: "Insecure Logging"
+    commit id: "Hardcoding Issues – Part 1"
+    commit id: "Insecure Data Storage – Part 1"
+    commit id: "Insecure Data Storage – Part 2"
+    commit id: "Insecure Data Storage – Part 3"
+    commit id: "Insecure Data Storage – Part 4"
+    commit id: "Input Validation Issues – Part 1"
+    commit id: "Input Validation Issues – Part 2"
+    commit id: "Access Control Issues – Part 1"
+    commit id: "Access Control Issues – Part 2"
+    commit id: "Access Control Issues – Part 3"
+    commit id: "Hardcoding Issues – Part 2"
+    commit id: "Input Validation Issues – Part 3"
+    checkout main
+    merge "DIVA"
+    commit id: "Make Write-ups"
 ```
 
-Prerequisites:
-
-- Basic `adb` commands
-
----
-
-First, we need to install the APK on our emulator:
-```bash
-adb install DIVA.apk
-```
-
----
-
-In this directory, you can find my write-ups for the challenges, detailing how I faced and solved them. Attempt to solve them on your own; if you encounter difficulty, refer to my write-ups for guidance.
-
----
-If you have any questions or need further assistance, feel free to open an issue on this repository or reach out through the available contact methods. Happy exploring and learning!
+Happy learning!

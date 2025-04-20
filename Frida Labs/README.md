@@ -4,18 +4,6 @@ Frida Labs is a collection of challenges designed to help you learn and master F
 
 > The purpose of this repository is to document solutions to these challenges, providing insights and guidance on how to effectively use Frida for security research and reverse engineering.
 
----
-
-## Prerequisites
-
-Before diving into the challenges, ensure you have the following:
-
-- **Basics of Reverse Engineering** using tools like `jadx`.
-- **Understanding of Java Code** to analyze Android applications.
-- **Ability to Write JavaScript** for creating Frida scripts.
-- **Familiarity with `adb`** (Android Debug Bridge) for interacting with Android devices.
-- **Rooted Device**: Some challenges may require a rooted Android device or emulator.
-
 ## What is Frida?
 
 [Frida](https://frida.re/) is a dynamic instrumentation toolkit that allows you to see what's happening inside other programs or apps in real-time. It's like having a window into an application's inner workings, enabling you to:
@@ -91,10 +79,29 @@ To interact with Frida and your device, you can use the following commands:
     - `-f <package_name>`: Attach to a specific package.
     - `-l <script.js>`: Load and execute the specified Frida script.
 
----
 
 Explore the provided solutions and scripts to learn how to apply Frida’s features to various challenges. Each script and write-up in this repository demonstrates practical techniques and insights into dynamic instrumentation.
 
-Feel free to modify and extend the scripts to suit your needs. If you encounter issues or have questions, please open an issue on the [GitHub page](https://github.com/DERE-ad2001/Frida-Labs).
+## Workflow
+```mermaid
+gitGraph LR:
+    commit tag: "Frida Labs" id: "By AD2001 & Shuaib Oladigbolu"
+    branch "Frida Labs"
+    checkout "Frida Labs"
+    commit id: "Frida setup, Hooking a method"
+    commit id: "Calling a static method"
+    commit id: "Changing the value of a variable"
+    commit id: "Creating a class instance"
+    commit id: "Invoking methods on an existing instance"
+    commit id: "Invoking a method with an object argument"
+    commit id: "Hooking the constructor"
+    commit id: "Introduction to native hooking"
+    commit id: "Changing the return value of a native function"
+    commit id: "Calling a native function"
+    commit id: "Patching instructions using X86Writer and ARM64Writer"
+    checkout main
+    merge "Frida Labs"
+    commit id: "Make Write-ups"
+```
 
-Happy learning and hooking!
+Happy learning!
